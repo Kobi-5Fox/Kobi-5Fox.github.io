@@ -10,13 +10,8 @@ app.get('/', (req, res)=>{
 });
 app.use(express.json());
 app.post('/', (req, res)=>{
-    const path=require('path');
-    console.log("Req.Headers ",req.headers);
-    console.log("Req.Body ",req.body);
-    console.log("Req.params ",req.params);
-
     res.status(200);
-    res.send(`<h2>${JSON.stringify(req.body)}<h2>`);
+    res.send(`Headers ${JSON.stringify(req.headers)}, \r\n  Body :${JSON.stringify(req.body)}`);
 });
 
 app.listen(PORT, (error) =>{
