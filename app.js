@@ -16,7 +16,7 @@ app.post('/', (req, res)=>{
     console.log("Req.params ",req.params);
 
     res.status(200);
-    res.send(`<h2>${JSON.stringify(req.headers)}<h2>`);
+    res.send(`<h2>${JSON.stringify(req.body)}<h2>`);
 });
 
 app.listen(PORT, (error) =>{
